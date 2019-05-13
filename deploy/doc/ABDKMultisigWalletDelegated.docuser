@@ -1,0 +1,7 @@
+{
+  "methods" : 
+  {
+    "constructor" : "Create new ABDK Multisig Wallet smart contract and make msg.sender to be\r the only owner of it.  The number of required approvals is set to one.\r"
+  },
+  "notice" : "ABDK Multisig Wallet Delegated smart contract is a delegated version of\r ABDK Multisig Wallet smart contract.  It delegates most of the work to\r another deployed ABDK Multisig Wallet smart contract, thus has small\r byte code and low deployment price.\r"
+}

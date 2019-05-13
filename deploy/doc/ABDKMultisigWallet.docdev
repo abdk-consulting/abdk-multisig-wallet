@@ -1,0 +1,203 @@
+{
+  "methods" : 
+  {
+    "approvalsCount(uint256)" : 
+    {
+      "params" : 
+      {
+        "_id" : "ID of the suggested transaction to get number of approvals for\r"
+      },
+      "return" : "number of approvals collected for suggested transaction with given\r        ID\r"
+    },
+    "approve(uint256)" : 
+    {
+      "params" : 
+      {
+        "_id" : "ID of the suggested transaction to be approved\r"
+      }
+    },
+    "approveAndExecute(uint256,address,uint256,bytes,uint256)" : 
+    {
+      "params" : 
+      {
+        "_data" : "transaction data\r",
+        "_id" : "ID of the suggested transaction to approve and execute\r",
+        "_salt" : "salt used to calculate transaction hash\r",
+        "_to" : "transaction destination\r",
+        "_value" : "transaction value\r"
+      },
+      "return" : "transaction execution status and returned data\r"
+    },
+    "calculateHash(address,uint256,bytes,uint256)" : 
+    {
+      "params" : 
+      {
+        "_data" : "transaction data\r",
+        "_salt" : "salt to use for hash calculation\r",
+        "_to" : "transaction destination address\r",
+        "_value" : "transaction value\r"
+      },
+      "return" : "transaction hash\r"
+    },
+    "cancelSuggestion(uint256)" : 
+    {
+      "params" : 
+      {
+        "_id" : "ID of the suggested transaction to be cancelled\r"
+      }
+    },
+    "changeOwner(uint8,address)" : 
+    {
+      "params" : 
+      {
+        "_newOwner" : "address of the new owner\r",
+        "_ownerIndex" : "index of the owner to be replaced\r"
+      }
+    },
+    "checkHash(uint256,address,uint256,bytes,uint256)" : 
+    {
+      "params" : 
+      {
+        "_data" : "transaction data\r",
+        "_id" : "ID of the suggested transaction to check index for\r",
+        "_salt" : "salt to use for hash calculation\r",
+        "_to" : "transaction destination address\r",
+        "_value" : "transaction value\r"
+      },
+      "return" : "true if hash of suggested transaction with given ID matches\r             transaction parameters provided, false otherwise\r"
+    },
+    "createSmartContract(bytes)" : 
+    {
+      "params" : 
+      {
+        "_byteCode" : "byte code to create smart contract with\r"
+      },
+      "return" : "created smart contract address and data returned by smart contract\r        creation\r"
+    },
+    "createSmartContract2(bytes,bytes32)" : 
+    {
+      "params" : 
+      {
+        "_byteCode" : "byte code to create smart contract with\r",
+        "_salt" : "salt to use for generating smart contract address\r"
+      },
+      "return" : "created smart contract address and data returned by smart contract\r        creation\r"
+    },
+    "execute(uint256,address,uint256,bytes,uint256)" : 
+    {
+      "params" : 
+      {
+        "_data" : "data of the transaction\r",
+        "_id" : "ID of the suggested transaction to be executed\r",
+        "_salt" : "salt used to calculate transaction hash\r",
+        "_to" : "destination address of the transaction\r",
+        "_value" : "value of the transaction\r"
+      },
+      "return" : "transaction execution status and returned data\r"
+    },
+    "getOwnerAt(uint8)" : 
+    {
+      "params" : 
+      {
+        "_index" : "index to get address of the owner at\r"
+      },
+      "return" : "address of the owner with given index or zero if there is no owner\r        with such index\r"
+    },
+    "hashOf(uint256)" : 
+    {
+      "params" : 
+      {
+        "_id" : "ID of the suggested transaction to get hash of parameters for\r"
+      },
+      "return" : "hash of parameters of suggested transaction with given ID\r"
+    },
+    "isApproved(uint256)" : 
+    {
+      "params" : 
+      {
+        "_id" : "ID of the suggested transaction to check\r"
+      },
+      "return" : "true if suggested transaction with given ID has collected enough\r        approvals to be executed, false otherwise\r"
+    },
+    "isApprovedBy(uint256,address)" : 
+    {
+      "params" : 
+      {
+        "_id" : "ID of the suggested transaction to check approval for\r",
+        "_owner" : "owner to check approval by\r"
+      },
+      "return" : "true if given owner has approved suggested transaction with given\r        ID, false otherwise\r"
+    },
+    "reveal(uint256,address,uint256,bytes,uint256)" : 
+    {
+      "params" : 
+      {
+        "_data" : "data of the transaction\r",
+        "_id" : "ID of the suggested transaction to reveal parameters of\r",
+        "_salt" : "salt used to calculate transaction hash\r",
+        "_to" : "destination address of the transaction\r",
+        "_value" : "value of the transaction\r"
+      }
+    },
+    "revokeApproval(uint256)" : 
+    {
+      "params" : 
+      {
+        "_id" : "ID of the suggested transaction to revoke approval for\r"
+      }
+    },
+    "setApprovalsRequired(uint8)" : 
+    {
+      "params" : 
+      {
+        "_approvalsRequired" : "new number of approvals required\r"
+      }
+    },
+    "suggest(bytes32)" : 
+    {
+      "params" : 
+      {
+        "_hash" : "hash of the transaction to be suggested\r"
+      },
+      "return" : "ID of the suggestion created\r"
+    },
+    "suggestAndApprove(bytes32)" : 
+    {
+      "params" : 
+      {
+        "_hash" : "hash of transaction parameters\r"
+      },
+      "return" : "ID of the suggestion created\r"
+    },
+    "suggestAndReveal(address,uint256,bytes)" : 
+    {
+      "params" : 
+      {
+        "_data" : "transaction data\r",
+        "_to" : "transaction destination\r",
+        "_value" : "transaction value\r"
+      },
+      "return" : "ID of the suggestion created\r"
+    },
+    "suggestApproveAndExecute(address,uint256,bytes)" : 
+    {
+      "params" : 
+      {
+        "_data" : "transaction data\r",
+        "_to" : "transaction destination\r",
+        "_value" : "transaction value\r"
+      },
+      "return" : "transaction execution status and returned data\r"
+    },
+    "suggestRevealAndApprove(address,uint256,bytes)" : 
+    {
+      "params" : 
+      {
+        "_data" : "transaction data\r",
+        "_to" : "transaction destination\r",
+        "_value" : "transaction value\r"
+      },
+      "return" : "ID of the suggestion created\r"
+    }
+  }
+}

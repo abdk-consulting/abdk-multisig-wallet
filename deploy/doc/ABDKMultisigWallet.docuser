@@ -1,0 +1,95 @@
+{
+  "methods" : 
+  {
+    "approvalsCount(uint256)" : 
+    {
+      "notice" : "Get number of approvals already collected for suggested transaction with\r given ID.\r "
+    },
+    "approve(uint256)" : 
+    {
+      "notice" : "Approve suggested transaction with given ID.\r "
+    },
+    "approveAndExecute(uint256,address,uint256,bytes,uint256)" : 
+    {
+      "notice" : "Approve transaction and execute it.\r "
+    },
+    "calculateHash(address,uint256,bytes,uint256)" : 
+    {
+      "notice" : "Calculate hash of transaction with given parameters.\r "
+    },
+    "cancelSuggestion(uint256)" : 
+    {
+      "notice" : "Cancel transaction suggestion.\r "
+    },
+    "changeOwner(uint8,address)" : 
+    {
+      "notice" : "Replace existing owner with given index with given new owner.  If there is\r no owner with given index, add new owner at given index.  If given new\r owner address is zero, remove owner with given index.\r "
+    },
+    "checkHash(uint256,address,uint256,bytes,uint256)" : 
+    {
+      "notice" : "Check hash of suggested transaction with given ID.\r "
+    },
+    "constructor" : "Create new ABDK Multisig Wallet smart contract and make msg.sender to be\r the only owner of it.  The number of required approvals is set to one.\r",
+    "createSmartContract(bytes)" : 
+    {
+      "notice" : "Create smart contract with given byte code.\r "
+    },
+    "createSmartContract2(bytes,bytes32)" : 
+    {
+      "notice" : "Create smart contract using CREATE2 opcode with given byte code and salt.\r "
+    },
+    "execute(uint256,address,uint256,bytes,uint256)" : 
+    {
+      "notice" : "Execute suggested transaction with given ID and parameters.\r "
+    },
+    "getOwnerAt(uint8)" : 
+    {
+      "notice" : "Get address of the owner with given index.\r "
+    },
+    "hashOf(uint256)" : 
+    {
+      "notice" : "Get hash of parameters of suggested transaction with given ID.\r "
+    },
+    "isApproved(uint256)" : 
+    {
+      "notice" : "Tell whether suggested transaction with given ID has collected enough\r approvals to be executed.\r "
+    },
+    "isApprovedBy(uint256,address)" : 
+    {
+      "notice" : "Tell whether given owner has approved suggested transaction with given ID.\r "
+    },
+    "reveal(uint256,address,uint256,bytes,uint256)" : 
+    {
+      "notice" : "Reveal parameters of suggested transaction with given ID.\r "
+    },
+    "revokeApproval(uint256)" : 
+    {
+      "notice" : "Revoke approval for suggested transaction with given ID.\r "
+    },
+    "setApprovalsRequired(uint8)" : 
+    {
+      "notice" : "Set number of approvals required to execute transaction.\r "
+    },
+    "suggest(bytes32)" : 
+    {
+      "notice" : "Suggest transaction with given hash to be executed.\r "
+    },
+    "suggestAndApprove(bytes32)" : 
+    {
+      "notice" : "Suggest transaction with given hash to be executed and approve this\r transaction.\r "
+    },
+    "suggestAndReveal(address,uint256,bytes)" : 
+    {
+      "notice" : "Suggest transaction to be executed and reveal its parameters.\r "
+    },
+    "suggestApproveAndExecute(address,uint256,bytes)" : 
+    {
+      "notice" : "Suggest transaction with given hash to be executed, approve this\r transaction, and execute it.\r "
+    },
+    "suggestRevealAndApprove(address,uint256,bytes)" : 
+    {
+      "notice" : "Suggest transaction to be executed, reveal its parameters, and approve the\r transaction.\r "
+    }
+  },
+  "notice" : "ABDK Multisig Wallet smart contract allows multiple (up to 255) parties to\r collectively own an Ethereum address.  This address may be used to securely\r store ether and to execute Ethereum transactions once approved by certain\r number of owners.\r"
+}
